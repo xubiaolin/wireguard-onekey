@@ -12,7 +12,7 @@ git clone https://github.com/weejewel/docker-wireguard-easy.git
 ```
 
 进入项目目录：`cd docker-wireguard-easy`
-运行脚本：`./wg-easy.sh`
+运行脚本：`./run.sh`
 
 按照提示输入服务器参数：`IPv4`地址或域名、管理员密码等。
 脚本会启动Wireguard VPN服务器，并将配置文件挂载到本地目录data/etc/wireguard中。
