@@ -8,10 +8,10 @@
 # 使用方法
 克隆该项目到本地：
 ```
-git clone https://github.com/xubiaolin/docker-wireguard-easy.git
+git clone https://github.com/xubiaolin/wireguard-onekey.git
 ```
 
-进入项目目录：`cd docker-wireguard-easy`
+进入项目目录：`cd wireguard-onekey`
 运行脚本：`./run.sh`
 
 按照提示输入服务器参数：`IPv4`地址或域名、管理员密码等。
