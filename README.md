@@ -8,7 +8,7 @@
 # 使用方法
 克隆该项目到本地：
 ```
-git clone https://github.com/weejewel/docker-wireguard-easy.git
+git clone https://github.com/xubiaolin/docker-wireguard-easy.git
 ```
 
 进入项目目录：`cd docker-wireguard-easy`
