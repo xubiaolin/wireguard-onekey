@@ -41,4 +41,4 @@ git clone https://github.com/xubiaolin/wireguard-onekey.git
 
 如果觉得本项目对您有帮助，欢迎通过扫描下方赞赏码捐助项目 :)
 
-<img src="./asserts/donate.png" alt="donate" width="200" height="200" />
+<img src="./asserts/donate.png" alt="donate" width="400" height="400" />
