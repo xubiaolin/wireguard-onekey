@@ -1,6 +1,10 @@
 # Wireguard Easy
 该项目可以帮助您在Docker中启动Wireguard VPN服务器，并提供简单的脚本来配置服务器参数。
 
+QQ交流群：
+
+![image](https://user-images.githubusercontent.com/51899048/221509739-7d039726-34a1-4174-b85f-2d0cbf07bd31.png)
+
 # 安装要求
 - Docker
 - Bash Shell
