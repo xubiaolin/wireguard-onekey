@@ -29,6 +29,7 @@ fi
 echo "--------------------"
 echo "ipv4或者域名：$ipv4"
 echo "web登录的密码：$PASSWORD"
+echo "管理后台访问端口：$TCP_PORT"
 echo "--------------------"
 
 echo "Do you want to continue? (y/n)"
@@ -65,6 +66,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "--------------------"
+echo "请在防火墙中打开$TCP_PORT端口, 需要放开udp和tcp两个协议"
 echo "your admin url：http://$ipv4:$TCP_PORT"
 echo "enjoy~"
 
