@@ -15,9 +15,14 @@ else
 fi
 
 read -p "请输入管理后台密码:" PASSWORD
-
 if [ -z "$PASSWORD" ]; then
     echo "密码为空，退出"
+    exit 1
+fi
+
+read -p "请输入管理后台访问端口:" TCP_PORT
+if [ -z "$TCP_PORT" ]; then
+    echo "管理后台访问为空，退出"
     exit 1
 fi
 
@@ -44,8 +49,8 @@ docker run -d \
     -e WG_DEFAULT_DNS=223.5.5.5,223.6.6.6 \
     -e WG_ALLOWED_IPS=10.0.8.0/24 \
     -e WG_PERSISTENT_KEEPALIVE=25 -v $(pwd)/data/etc/wireguard:/etc/wireguard \
-    -p 51820:51820/udp \
-    -p 51821:51821/tcp \
+    -p $TCP_PORT:51820/udp \
+    -p $TCP_PORT:51821/tcp \
     --cap-add=NET_ADMIN \
     --cap-add=SYS_MODULE \
     --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
@@ -59,6 +64,6 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "--------------------"
-echo "your admin url：http://$ipv4:$port"
+echo "your admin url：http://$ipv4:$TCP_PORT"
 echo "enjoy~"
 
