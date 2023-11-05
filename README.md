@@ -9,6 +9,12 @@ QQ交流群：
 - Docker
 - Bash Shell
 
+# 安装docker
+如果已经安装，可以跳过
+```
+curl -fSsL https://get.docker.com | bash
+```
+
 # 使用方法
 克隆该项目到本地：
 ```
