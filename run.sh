@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# 获取当前系统内核版本
+kernel_version=$(uname -r)
+
+# WireGuard 要求的最低内核版本
+required_version="5.6"
+
+# 比较内核版本，如果符合要求则打印绿色提示，否则打印红色提示
+if [[ "$(printf '%s\n' "$kernel_version" "$required_version" | sort -V | head -n1)" == "$required_version" ]]; then
+    echo -e "\e[32m当前系统内核版本 ($kernel_version) 符合要求。\e[0m"
+else
+    echo -e "\e[31m当前系统内核版本 ($kernel_version) 不符合要求，请升级至 $required_version 或更高版本。\e[0m"
+    exit 1
+fi
+
 read -p "是否自动获取公网IP地址？（y/n）" use_auto_ip
 if [[ "$use_auto_ip" =~ ^[Yy]$ ]]; then
     ipv4=$(curl -s https://ipv4.icanhazip.com/)
