@@ -65,6 +65,7 @@ docker run -d \
     -e WG_ALLOWED_IPS=10.0.8.0/24 \
     -e WG_PERSISTENT_KEEPALIVE=25 -v $(pwd)/data/etc/wireguard:/etc/wireguard \
     -e WG_PORT=$TCP_PORT\
+    -e WG_MTU=1280\
     -p $TCP_PORT:51820/udp \
     -p $TCP_PORT:51821/tcp \
     --cap-add=NET_ADMIN \
